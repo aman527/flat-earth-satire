@@ -4,8 +4,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>The Knight of Truth</h1>
-      <h5></h5>
+      <h1>Globeslayers</h1>
+      <h5>The Truth: Plane and Simple</h5>
     </div>
   );
 }
