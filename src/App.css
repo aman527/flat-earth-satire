@@ -5,3 +5,29 @@ nav {
   display: flex;
   flex-direction: row;
 }
+
+.landingcontainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing {
+  width: 70%;
+}
+.landing .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+.redalert {
+  height: 70px;
+  margin: 0px 10px 0 10px;
+}
+.landing .content {
+  text-align: left;
+}
+.landing h1 {
+  text-align: center;
+}
