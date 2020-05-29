@@ -21,7 +21,6 @@ function Blog() {
                 <h1>Exposing the Con-sphere-acy</h1>
             </div>
             <div className = "article">
-                <h1>Exposing the Con-sphere-acy</h1>
                 <p>
                     hello!
                 </p>

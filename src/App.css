@@ -64,20 +64,22 @@
 
 .content h2 {
   margin: -10px 0 10px 0;
+  font-weight: bold;
 }
 
 .interested {
   height: 7vh;
   width: 40%;
 
-  background-color: #B9D6F2;
-  color: black;
+  background-color: rgb(131, 189, 228);
+  color: white;
 
   border: 2px solid #81A4CD;
   border-radius: 5px;
 
   text-decoration: none;
   font-size: large;
+  font-weight: bold;
 
   display: flex;
   justify-content: center;
