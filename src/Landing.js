@@ -46,7 +46,7 @@ function Landing() {
                     It's time for you to see through the lies and deceit. After <b>minutes</b> of tireless investigation and mountains of evidence 
                     drawn from the <b>latest and most reputable</b> pseudoscience, we've uncovered the shocking truth.
                 </p>
-                <a href = "/blog" className = "interested">Interested?</a>
+                <a href = "/home" className = "interested">Interested?</a>
             </div>
         </div>
     )
