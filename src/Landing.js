@@ -1,13 +1,31 @@
 import React from 'react';
-import redalert from './Red Alert.png'
+import redalert from './images/Red Alert.png'
+import orangealert from './images/Orange Alert.png'
 
+function Alert(props) {
+    const imgstyle = {
+        height: "100px",
+        position: "absolute",
+        top: "-50px",
+        left: props.left,
+        transition: "opacity 1s ease-in-out"
+    }
+    return (
+        <div className = "alert-container">
+            <div className='alert'>
+                <img style = {imgstyle} src = {orangealert} className = "orangealert" alt="orangealert"></img>
+                <img style = {imgstyle} src = {redalert} className = "redalert" alt="redalert"></img>
+            </div>
+        </div>
+    )
+}
 function Landing() {
     return (
         <div className = "landingcontainer">
             <div className = "title">
-                    <img src = {redalert} className = "redalert" alt="redalert"></img>
-                    <h1>The world as we know it is in grave danger.</h1>
-                    <img src = {redalert} className = "redalert" alt="redalert"></img>
+                <Alert left = "-10px"/>
+                <h1>The world as we know it is in grave danger.</h1>
+                <Alert left = "-50px"/>
             </div>
             <div className = 'content'>
                 <p>
