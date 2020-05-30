@@ -27,10 +27,10 @@ function Blog() {
                     I’ll begin by walking you through the countless hours of intensive and high stakes reporting I conducted to expose this government fraud. At every step of the way, I pulled information from only the most trustworthy of sources, so rest assured that what you’re about to read is indisputably accurate.
                 </p>
                 <p>
-                    After exhaustively searching Google for “evidence for conspiracies,” I began to harbor suspicions that perhaps the government was trying to hide something from us. I wasn’t quite sure what exactly, but I knew I was onto something. As I continued my researching, I found progressively less and less evidence, a sure sign that I was on the right track. Lower quality evidence and less of it can only mean one thing: an increase in government censorship to prevent anyone from discovering the truth.
+                    I’ve always harbored suspicions that perhaps the government was trying to hide something from us, so I started aggressively searching for “failed government conspiracy coverups” on social media. As continued, I found progressively less and less evidence, a sure sign that I was on the right track. Lower quality evidence and less of it can only mean one thing: an increase in government censorship to prevent anyone from discovering the truth.
                 </p>
                 <p>
-                    Tens of Facebook posts later, I stumbled onto a virtually unknown blog article titled “TOP SECRET: what the government doesn’t want you to know!” I had struck gold. Since the blog had only 34 page views, I had likely found it before the government agents could censor it. In the article, the author, who unfortunately posted anonymously, theorized that the United States government was hiding the truth about the shape of planet Earth from the people. He or she proposed that the Earth was not the globe we had all been led to believe, but instead a flat disc. Quite literally a world-altering revelation.
+                    Tens of Facebook posts later, I stumbled onto a virtually unknown blog article titled “TOP SECRET: what the government doesn’t want you to know!” I had struck gold. At the time, the blog had only 34 page views, so I had likely found it before the government agents could censor it. In the article, the author, who unfortunately posted anonymously, theorized that the United States government was hiding the truth about the shape of planet Earth from the people. He or she proposed that the Earth was not the globe we had all been led to believe, but instead a flat disc. Quite literally a world-altering revelation.
                 </p>
                 <p>
                     I knew immediately that this was the irrefutable truth, but to remove any hint of doubt, I searched for “proof of a flat earth.” The most obvious piece of evidence comes straight from 17th and 18th century philosophy: empiricism. Look out your window; walk around outside; climb atop a mountain and look out across the horizon. No matter what you try, you won’t find a trace of curvature! For a supposedly round Earth, that’s quite suspicious, no?
@@ -45,6 +45,13 @@ function Blog() {
                     On the day of the operation, the agent bypassed the initial security check-in, then climbed into a ventilation duct in the bathroom. After shimmying down miles of piping, the agent reached sub-basement 3, where he or she cut one wire and shut down power to the entire building. The agent had planned to take advantage of the ensuing chaos and photograph documents from the innermost chamber of the Pentagon. However, the agent’s camera had been confiscated at the initial security checkpoint, so he or she fashioned a camera with 50x optical zoom capabilities out of a potato stolen from the cafeteria. After evading roving security guards and dodging AI-powered machine gun fire, the agent finally reached the central intelligence room, where he or she quickly snapped the following photo before being airlifted out.
                 </p>
                 <img src = {pentagon_doc} alt = "Pentagon TOP SECRET: Earth flat." className = 'pentagon-doc'></img>
+                <p>
+                    Indisputable, documentary proof from a Pentagon insider where the US government acknowledges that the Earth is flat. Still think it’s round?
+                </p>
+                <p>
+                    Well, not to discredit that heroic agent, but he or she didn’t really need to risk life and limb for proof of the conspiracy. Just recently, the President of the United States himself has been quoted admitting that the Earth is flat, using the same empiricist logic that I previously espoused. What more evidence can one need?
+                </p>
+                <img src = {trump_quote} alt = "Trump quoted saying the earth is flat." className = "trump-quote"></img>
             </div>
         </div>
     )
