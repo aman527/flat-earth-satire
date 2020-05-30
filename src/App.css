@@ -178,5 +178,18 @@
   text-align: left;
   line-height: 1.6;
 }
+hr {
+  width: 50%;
+  border-top: 1px solid #77878B;
+}
+.pentagon-doc {
+  max-width: 60%;
+  height: auto;
+  align-self: center;
+}
+.trump-quote {
+  max-width: 100%;
+  height: auto;
+}
 /* #endregion */
 
