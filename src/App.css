@@ -223,8 +223,8 @@ hr {
   align-items: center;
 }
 .profile-picture {
-  max-width: 15%;
-  height: auto;
+  max-height: 90%;
+  width: auto;
   margin: 2vh 0 2vh 2vw;
 }
 .author-info {
@@ -323,7 +323,7 @@ hr {
   align-self: flex-end;
   text-align: left;
   margin: -1vh 1vw 1vh 1vw;
-  font-size: 0.2em;
+  font-size: 0.7rem;
   line-height: 1.5;
 }
 /* #endregion */
@@ -373,6 +373,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .about {
