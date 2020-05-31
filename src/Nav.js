@@ -1,20 +1,61 @@
 import React from 'react'
 import logo from './images/logo.png';
+import { useLocation } from 'react-router-dom'
 
-function Nav () {
+
+function Link(props) {
+    let location = useLocation();
+    let className = "link";
+    if(props.href === location.pathname){
+        className += " active"
+    }
     return (
-        <ul className = "nav">
+        <li className = {className}>
+            <a href = {props.href}>{props.text}</a>
+        </li>
+    )
+ }
+class Nav extends React.Component {
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          previous_scroll_position: window.pageYOffset,
+          visible: true
+        };
+    }
+    handleScroll = () => {
+        const { previous_scroll_position } = this.state
+        const current_scroll_position = window.pageYOffset;
+        const visible =  previous_scroll_position > current_scroll_position;
+      
+        this.setState({
+            previous_scroll_position: current_scroll_position,
+            visible
+        });
+    }
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+      
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+    render () {
+        return (
+            <ul className = {this.state.visible ? "nav" : "nav hidden"}>
                 <li><img src = {logo} alt = "logo" className = "logo"></img></li>
                 <li className = "titlecontainer">
-                    <h2>The Conspiracy Slayers</h2>
+                    <h3>Conspiracy Slayers</h3>
                     <p className = "tagline">The Truth: Plane and Simple</p>
                 </li>
-                <li className = "link"><a href = "/home">Home</a></li>
-                <li className = "link"><a href = "/research">Latest Research</a></li>
-                <li className = "link"><a href = "/knownconspiracies">Known Government Conspiracies</a></li>
-                <li className = "link"><a href = "/about">About</a></li>
-        </ul>
-    )
+                <Link href = "/home" text = "Home"/>
+                <Link href = "/latestresearch" text = "Latest Research" />
+                <Link href = "/failedcoverups" text = "Failed Government Coverups" />
+                <Link href = "/about" text = "About" />
+            </ul>
+        )
+    }
 }
 
 export default Nav

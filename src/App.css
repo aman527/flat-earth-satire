@@ -95,20 +95,28 @@
 
 /* #endregion */
 
-/* #region Blog */
+/* #region Nav */
 .nav {
+  z-index: 10;
   position: fixed;
-  height: 13vh;
+  height: 10vh;
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 100%;
   background-color: #225560;
   color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.356);
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  top: 0;
+  transition: top 0.4s;
+}
+.nav.hidden {
+  top: -20vh;
 }
 .nav .logo {
   height: 5vh;
@@ -121,17 +129,24 @@
   margin-left: 1vw;
   margin-right: 2vw;
 }
-.titlecontainer h2 {
+.titlecontainer h3 {
   margin: 2vh 0 -1vh 0;
+  font-weight: normal;
 }
 .titlecontainer p {
   font-size: small;
 }
 .link {
   height: 100%;
+  margin-top: -0.5vh;
+  border-bottom: 0.5vh solid #225560;
 }
 .link:hover {
   background-color: #1b4a53;
+  border-bottom: 0.5vh solid #1b4a53;
+}
+.link.active {
+  border-bottom: 0.5vh solid white;
 }
 .link a {
   display: flex;
@@ -140,8 +155,12 @@
   height: 100%;
   text-decoration: none;
   color: white;
-  margin: 0 1vw 0 1vw;
+  margin: 0.5vh 1vw 0 1vw;
 }
+
+/* #endregion */
+
+/* #region Blog */
 .blog {
   height: 100vh;
   display: flex;
@@ -153,7 +172,7 @@
   width: 100%;
   background-color: black;
 
-  margin-top: 13vh;
+  padding-top: 10vh;
 }
 .imageheader h1 {
   color: white;
@@ -174,6 +193,10 @@
   text-align: left;
   line-height: 1.6;
 }
+.article .emphasized {
+  color: #087E8B;
+  font-weight: bold;
+}
 hr {
   width: 50%;
   border-top: 1px solid #77878B;
@@ -184,9 +207,189 @@ hr {
   align-self: center;
   margin: 2vh 0 2vh 0;
 }
-.trump-quote {
+.obama-quote {
   max-width: 100%;
   height: auto;
 }
+.about-card {
+  margin: 5vh 0 5vh 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.13);
+  width: 70%;
+  height: 100px;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  align-items: center;
+}
+.profile-picture {
+  max-width: 15%;
+  height: auto;
+  margin: 2vh 0 2vh 2vw;
+}
+.author-info {
+  margin-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.author {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.description {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #2F3537;
+  margin: 0;
+}
+.email {
+  font-size: 0.9rem;
+  margin: 0 0 0 0.2vw;
+  color: #2F3537;
+}
+
 /* #endregion */
 
+/* #region Footer */
+.footer {
+  z-index: 10;
+  width: 100%;
+  color: white;
+  background-color: #2F3537;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer .logo {
+  height: 5vh;
+  margin: 3vh 1vw 3vh 2vw;
+}
+.footer .github {
+  height: 5vh;
+  margin: 0 2vw 0 1vw;
+}
+/* #endregion */
+
+/* #region TakenDown */
+.takendown {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #A9BCD0;
+}
+.message-container {
+  height: 100%;
+  width: 70vw;
+
+  margin-top: 10vh;
+
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dod-logo {
+  max-width: 12vw;
+  height: auto;
+  margin-right: 3vw;
+}
+
+.takedown-message {
+  background-color: white;
+  height: 55vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+  border-radius: 10px;
+  line-height: 1.6;
+  text-align: left;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.219);
+}
+
+.takendown .disclaimer {
+  align-self: flex-end;
+  text-align: left;
+  margin: -1vh 1vw 1vh 1vw;
+  font-size: 0.2em;
+  line-height: 1.5;
+}
+/* #endregion */
+
+/* #region About */
+
+.about-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.styledbackground {
+  width: 100%;
+  height: 100%;
+  margin-top: 10vh;
+  position: fixed;
+}
+.styledbackground div {
+  margin: 0;
+  padding: 0;
+}
+.styledbackground .top {
+  width: 100%;
+  height: 20%;
+  background-color: #A9BCD0;
+}
+.styledbackground .middle {
+  width: 100%;
+  height: 40%;
+  background-color: rgb(123, 164, 207);
+}
+.styledbackground .bottom { 
+  width: 100%;
+  height: 40%;
+  background-color: #A9BCD0;
+}
+.about-container {
+  height: 100%;
+  width: 60vw;
+
+  margin-top: 10vh;
+
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about {
+  z-index: 10;
+  background-color: white;
+  height: 55vh;
+  padding: 2vh 5vw;
+  border-radius: 10px;
+  line-height: 1.6;
+  text-align: left;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.219);
+}
+
+
+
+
+
+
+/* #endregion */
