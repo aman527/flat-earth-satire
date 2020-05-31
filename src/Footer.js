@@ -9,7 +9,7 @@ const Footer = () => {
                 <img src = {logo} alt = "" className = "logo"></img>
                 <p>Conspiracy Slayers</p>
             </div>
-            <p>Created by Aman Choudhri.</p>
+            <p>Created by Aman Choudhri</p>
             <div>
                 <p>View Project Source:</p>
                 <a href = "https://github.com/aman527/flat-earth-satire"><img src = {github} alt = "" className = "github"></img></a>
