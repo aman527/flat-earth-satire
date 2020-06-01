@@ -8,28 +8,42 @@ import About from "./About.js"
 
 import './App.css';
 
-function App () {
-  return (
-    <div className="App">
-      <Router>
-        <Route path = "/" exact>
-          <Landing />
-        </Route>
-        <Route path = "/home">
-          <Blog />
-        </Route>
-        <Route path = "/latestresearch">
-          <TakenDown name = "Latest Research"/>
-        </Route>
-        <Route path = "/failedcoverups">
-          <TakenDown name = "Failed Government Coverups"/>
-        </Route>
-        <Route path = "/about">
-          <About />
-        </Route>
-      </Router>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      windowWidth: null,
+    }
+  }
+  componentDidMount() {
+    this.setState({windowWidth: document.body.clientWidth})
+      window.addEventListener('resize', () => {
+          this.setState({windowWidth: document.body.clientWidth})
+      });
+  }
+  render () {
+    return (
+      <div className="App">
+        <Router>
+          <Route path = "/" exact>
+            <Landing width = {this.state.windowWidth}/>
+          </Route>
+          <Route path = "/home">
+            <Blog width = {this.state.windowWidth}/>
+          </Route>
+          <Route path = "/latestresearch">
+            <TakenDown name = "Latest Research" width = {this.state.windowWidth}/>
+          </Route>
+          <Route path = "/failedcoverups">
+            <TakenDown name = "Failed Government Coverups" width = {this.state.windowWidth}/>
+          </Route>
+          <Route path = "/about">
+            <About width = {this.state.windowWidth}/>
+          </Route>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;

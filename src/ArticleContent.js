@@ -4,9 +4,10 @@ import pentagon_doc from './images/Top Secret Pentagon Document.jpg'
 import obama_quote from './images/obama quote.jpeg'
 import profile_pic from "./images/Anonymous Blue Icon.png"
 
-export default function ArticleContent() {
+export default function ArticleContent(props) {
+    let img_style = props.shrink ? {width: "80vw", height: "auto"} : null
     return (
-        <div className = "article">
+        <div className = "article" style = {props.shrink ? {width: "80%"} : null}>
             <p>
                 <span className = "emphasized">DISCLAIMER</span>: The information you’re about to encounter is so top secret — and the government so intent on preventing its dissemination to the general public — that just by being on this site, you may be placing yourself into danger. 
                 This site is an active hacking warzone, with government cyber firepower regularly being trained on our pages. 
@@ -38,14 +39,14 @@ export default function ArticleContent() {
             <p>
                 On the day of the operation, the agent bypassed the initial security check-in, then climbed into a ventilation duct in the bathroom. After shimmying down miles of piping, the agent reached sub-basement 3, where he or she cut one wire and shut down power to the entire building. One might think that the Pentagon's electrical grid would be more robust than to be incapacitated when a single wire is cut, but this agent clearly knew otherwise. After cutting the power, the agent had planned to take advantage of the ensuing chaos and photograph documents from the innermost chamber of the Pentagon, but his or her camera had been confiscated at the initial security checkpoint. The agent quickly adapted, however, fashioning a camera with 50x optical zoom capabilities out of a potato stolen from the kitchen before continuing the mission. After evading roving security guards and dodging AI-powered machine gun fire, the agent finally reached the central intelligence room, where he or she quickly snapped the following photo before being airlifted out.
             </p>
-            <img src = {pentagon_doc} alt = "Pentagon TOP SECRET: Earth flat." className = 'pentagon-doc'></img>
+            <img src = {pentagon_doc} alt = "Pentagon TOP SECRET: Earth flat." className = 'pentagon-doc' style = {img_style}></img>
             <p>
                 Indisputable, documentary proof from a Pentagon insider where the US government acknowledges that the Earth is flat. Still think it’s round?
             </p>
             <p>
                 Well, not to discredit that heroic agent, but he or she didn’t really need to risk life and limb for proof of the conspiracy. Just recently, Barack Obama himself has been quoted admitting that the Earth is flat, using the same empiricist logic that I previously espoused. What more evidence can one need?
             </p>
-            <img src = {obama_quote} alt = "Obama quoted saying the Earth is flat." className = "obama-quote"></img>
+            <img src = {obama_quote} alt = "Obama quoted saying the Earth is flat." className = "obama-quote" style = {img_style}></img>
             <p>
                 An image like that just can&rsquo;t be faked with current technology, so these words must have come right from the Former President himself. Though the evidence in favor of a flat Earth is pretty unequivocal, let's just examine the counter-evidence for completeness' sake. After all, I <em>am</em> a proponent of well-evidenced and thorough argumentation.
             </p>
@@ -62,11 +63,11 @@ export default function ArticleContent() {
                 That is, until now. Now, you know that our government — which is sworn by the Constitution to protect us — is conspiring to keep us in the dark. Now, you know what lies behind the veil that was so carefully crafted to blind you. Now, you know <span className = "emphasized">the truth</span>. At least, you should. If you <em>still</em> refuse to accept that the Earth is flat, don&rsquo;t even try emailing to convince me. Nothing can change my mind: <span className = "emphasized">I already know I&rsquo;m right</span>.
             </p>
             <hr />
-            <div className = "about-card">
-                <img src = {profile_pic} alt = "" className = "profile-picture"></img>
+            <div className = "about-card" style = {props.shrink ? {width: "90vw", marginTop: "3vh"} : null}>
+                <img src = {profile_pic} alt = "" className = "profile-picture" style = {props.shrink ? {width: "15vw"} : null}></img>
                 <div className = "author-info">
-                    <p className = "author">Anonymous <span className = "email">internettroll@notrealemail.com</span></p>
-                    <p className = "description">M.D., Ph.D, Astronaut, Conspiracy Slayer</p>
+                    <p className = "author" style = {props.shrink ? {fontSize: "large"} : null}>Anonymous <span className = "email" style = {props.shrink ? {fontSize: "x-small"} : null}>internettroll@notrealemail.com</span></p>
+                    <p className = "description" style = {props.shrink ? {fontSize: "x-small"} : null}>M.D., Ph.D, Astronaut, Conspiracy Slayer</p>
                 </div>
             </div>
         </div>

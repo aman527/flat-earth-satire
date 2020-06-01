@@ -6,16 +6,17 @@ import ArticleContent from "./ArticleContent.js"
 
 import flat_earth_overhead from './images/flat_earth_overhead.png'
 
-function Blog() {
+function Blog(props) {
+    let shrink = props.width < 600;
     return (
         <div className = "blog">
-            <Nav />
+            <Nav width = {props.width}/>
             <div className = "imageheader">
-                <img src = {flat_earth_overhead} alt = "flat earth" className = 'flat-earth-overhead'></img>
-                <h1>Exposing the Con-sphere-acy</h1>
+                <img src = {flat_earth_overhead} alt = "flat earth" className = 'flat-earth-overhead' style = {shrink ? {width: "50vw", height: "auto"} : null}></img>
+                <h1 style = {shrink ? {fontSize: "x-large"} : null}>Exposing the Con-sphere-acy</h1>
             </div>
-            <ArticleContent />
-            <Footer />
+            <ArticleContent shrink = {shrink}/>
+            <Footer width = {props.width}/>
         </div>
     )
 }

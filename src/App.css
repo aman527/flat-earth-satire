@@ -259,7 +259,6 @@ hr {
 
 /* #region TakenDown */
 .takendown {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -344,7 +343,6 @@ hr {
 }
 .about-container {
   height: 100%;
-  width: 60vw;
 
   margin-top: 10vh;
 
@@ -356,7 +354,7 @@ hr {
 }
 
 .about {
-  z-index: 10;
+  z-index: 1;
   background-color: white;
   height: 55vh;
   padding: 2vh 5vw;

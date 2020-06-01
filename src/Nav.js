@@ -44,6 +44,7 @@ class MobileMenu extends React.Component {
         }
         let link_container_style = {
             position: "absolute",
+            zIndex: "5000",
             top: "10vh",
             right: 0,
             backgroundColor: "rgba(27, 27, 27, 0.892)",
@@ -109,7 +110,6 @@ class Nav extends React.Component {
         this.state = {
           previous_scroll_position: window.pageYOffset,
           visible: true,
-          windowWidth: null,
         };
     }
     handleScroll = () => {
@@ -123,18 +123,14 @@ class Nav extends React.Component {
         });
     }
     componentDidMount() {
-        this.setState({windowWidth: document.body.clientWidth})
         window.addEventListener("scroll", this.handleScroll);
-        window.addEventListener('resize', () => {
-            this.setState({windowWidth: document.body.clientWidth})
-        });
     }
       
     componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll);
     }
     render () {
-        if (this.state.windowWidth < this.mediaQuery.phone) {
+        if (this.props.width < this.mediaQuery.phone) {
             let nav_style = {
                 height: "10vh",
 
@@ -153,7 +149,8 @@ class Nav extends React.Component {
             let logo_style = {
                 height: "4vh",
                 width: "auto",
-                marginLeft: "5vw"
+                marginLeft: "3vw",
+                marginRight: "2vw",
             }
             return (
                 <ul className = {this.state.visible ? "nav" : "nav hidden"} style = {nav_style}>
@@ -167,7 +164,7 @@ class Nav extends React.Component {
                     <MenuLinks device = "phone"/>
                 </ul>
             )
-        } else if (this.state.windowWidth < this.mediaQuery.tablet) {
+        } else if (this.props.width < this.mediaQuery.tablet) {
             let nav_style = {
                 height: "10vh",
 
@@ -194,8 +191,8 @@ class Nav extends React.Component {
                     <div style = {logo_div_style}>
                         <img src = {logo} alt = "logo" className = "logo" style = {logo_style}></img>
                         <div className = "titlecontainer">
-                            <h3 style = {{fontWeight: "normal", fontSize: "xx-large", marginTop: "10px"}}>Conspiracy Slayers</h3>
-                            <p style = {{fontSize: "inherit"}}>The Truth: Plane and Simple</p>
+                            <h3 style = {{fontWeight: "normal", fontSize: "large", marginTop: "10px"}}>Conspiracy Slayers</h3>
+                            <p style = {{fontSize: "normal"}}>The Truth: Plane and Simple</p>
                         </div>
                     </div>
                     <MenuLinks device = "tablet"/>
