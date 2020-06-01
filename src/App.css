@@ -317,7 +317,7 @@ hr {
   align-items: center;
 }
 .styledbackground {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   margin-top: 10vh;
   position: fixed;

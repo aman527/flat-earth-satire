@@ -106,10 +106,14 @@ class Nav extends React.Component {
             tablet: 770,
             phone: 590,
         };
-
+        let enable = true;
+        if (this.props.width < this.mediaQuery.tablet) {
+            enable = false;
+        }
         this.state = {
           previous_scroll_position: window.pageYOffset,
           visible: true,
+          enable_hide_animation: enable,
         };
     }
     handleScroll = () => {
@@ -123,7 +127,9 @@ class Nav extends React.Component {
         });
     }
     componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
+        if (this.state.enable_hide_animation) {
+            window.addEventListener("scroll", this.handleScroll);
+        }
     }
       
     componentWillUnmount() {
