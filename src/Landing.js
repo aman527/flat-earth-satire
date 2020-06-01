@@ -52,9 +52,9 @@ function TitleBar(props) {
     } else {
         return (
             <div style = {title_style("2vh")}>
-                <Alert width = "10vw" marginTop = "-4vw" left = "10vw"/>
+                <Alert width = "8vw" marginTop = "-3.5vw" left = "10vw"/>
                 <h1>The world as we know it is in grave danger.</h1>
-                <Alert width = "10vw" marginTop = "-4vw" left = "83vw"/>
+                <Alert width = "8vw" marginTop = "-3.5vw" left = "83vw"/>
             </div>
         )
     }
