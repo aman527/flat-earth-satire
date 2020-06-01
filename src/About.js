@@ -31,7 +31,7 @@ function About (props) {
         )
     } else {
         return (
-            <div className = "about-page" style = {{fontSize: "small"}}>
+            <div className = "about-page">
                 <Nav width = {props.width}/>
                 <div className = "styledbackground">
                     <div className = "top"></div>
