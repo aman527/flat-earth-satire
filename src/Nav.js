@@ -106,14 +106,10 @@ class Nav extends React.Component {
             tablet: 770,
             phone: 590,
         };
-        let enable = true;
-        if (this.props.width < this.mediaQuery.tablet) {
-            enable = false;
-        }
         this.state = {
           previous_scroll_position: window.pageYOffset,
           visible: true,
-          enable_hide_animation: enable,
+          enable_hide_animation: false,
         };
     }
     handleScroll = () => {
@@ -212,6 +208,9 @@ class Nav extends React.Component {
                 justifyContent: "flex-start",
                 alignItems: "center",
             }
+            this.setState({
+                enable_hide_animation: true,
+            })
             return (
                 <ul className = {this.state.visible ? "nav" : "nav hidden"} style = {nav_style}>
                     <li><img src = {logo} alt = "logo" className = "logo"></img></li>
