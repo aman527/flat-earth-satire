@@ -208,9 +208,6 @@ class Nav extends React.Component {
                 justifyContent: "flex-start",
                 alignItems: "center",
             }
-            this.setState({
-                enable_hide_animation: true,
-            })
             return (
                 <ul className = {this.state.visible ? "nav" : "nav hidden"} style = {nav_style}>
                     <li><img src = {logo} alt = "logo" className = "logo"></img></li>
